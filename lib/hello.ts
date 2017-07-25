@@ -1,7 +1,7 @@
 export class Hello{
 
     speak(){
-        console.log('Hello world');
+        return "Hello world!";
     }
 
 }
