@@ -31,7 +31,6 @@
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
-    "@types/jasmine": "^2.5.53",
     "@types/mocha": "^2.2.41",
     "chai": "^4.1.0",
     "chai-as-promised": "^7.1.1",
