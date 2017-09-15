@@ -9,6 +9,6 @@ describe('Hello.speak()', () => {
     it('should say Hello World', () =>{
         var hello = new Hello();
         let message = hello.speak();
-        expect(message).to.equal("Hello World!");
+        expect(message).to.be.eql("Hello world!");
     });
 });

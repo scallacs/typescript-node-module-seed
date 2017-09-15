@@ -1,0 +1,6 @@
+--timeout 15000
+--recursive lib
+--require ts-node/register 
+--reporter spec 
+--require ./test/bootstrap.ts
+--compilers tsx:ts-node/register,ts:ts-node/register
