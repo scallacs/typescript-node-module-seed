@@ -1,5 +1,7 @@
 # Typescript npm module seed
 
+[![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage][coveralls-image]][coveralls-url]
+
 Typescript module seed
 
 ## Features

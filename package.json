@@ -1,5 +1,5 @@
 {
-  "name": "ts-module-seed",
+  "name": "typescript-node-module-seed",
   "version": "0.0.1",
   "description": "Seed repo for new node modules using Typescript",
   "main": "dist/index",
