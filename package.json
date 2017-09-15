@@ -1,34 +1,37 @@
 {
-  "name": "typescript-node-module-seed",
+  "name": "@dfordev/typescript-node-module-seed",
   "version": "0.0.1",
   "description": "Seed repo for new node modules using Typescript",
   "main": "dist/index",
   "typings": "dist/index",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {
     "prepublish": "npm run build",
     "test": "mocha",
     "cover": "nyc npm test",
-    "build": "./node_modules/.bin/rimraf ./dist & tsc -p ./tsconfig.lib.json",
-    "lint": "tslint \"lib/**/*.ts\""
+    "build": "num run clean & tsc -p ./tsconfig.lib.json",
+    "lint": "tslint \"lib/**/*.ts\"",
+    "clean": "rimraf .nyc_ouput coverage dist"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ivpusic/node-module-seed.git"
+    "url": "git://github.com/scallacs/typescript-node-module-seed.git"
   },
   "keywords": [
     "seed",
     "node",
     "repo",
     "new",
-    "projects"
+    "projects",
+    "typescript"
   ],
-  "author": "Stephane Leonard",
+  "author": "Stephane Leonard <stephane@dfordev.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scallacs/ts-module-seed/issues"
+    "url": "https://github.com/scallacs/typescript-node-module-seed/issues"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
@@ -43,8 +46,7 @@
     "nyc": "^11.2.1",
     "istanbul": "^0.4.5"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "nyc": {
     "include": [
       "lib/*.ts",
@@ -65,5 +67,6 @@
       "html"
     ],
     "all": true
-  }
+  },
+  "homepage": "https://github.com/scallacs/typescript-node-module-seed#readme"
 }

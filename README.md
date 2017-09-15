@@ -14,38 +14,50 @@ Typescript module seed
     * code coverage with istanbul
 * **Publishing** proper .npmignore so published module only has the necessary sources
 
-## Build
-
-`npm run build`
-
-## Test 
-
-### Runing tests
-
-`npm run test`
-
-### Test with coverage
-
-`npm run cover`
-
 ## Starting a new project
 
 * git clone the repository
 * remove .git
 * npm install
-* npm run typings install
+
+### Build
+
+`npm run build`
+
+### Test 
+
+- `npm run test` - Tests
+- `npm run cover` - Tests with coverage
+
 
 ## Commands
+
+All commands in [package.json](./package.json)
+
 * **npm run build** - run tsc
 * **npm run build:watch** - run tsc in watch-mode
 * **npm run clean** - delete *build* directory
 * **npm run lint** - runs tslint
-* **npm run node** - run ts-node to get a REPL or run a script, e.g. a spike: npm run node src/spikes/consolespike.ts
 * **npm test** - run mocha on all *.ts files in *test/*
-* **npm run test:watch** - re-run mocha on all *.ts files in *test/* everytime a file changes
-* **npm run typings** - run locally installed typings. Note you need to use -- before using options, e.g. *npm run typings install dt~commander -- --global --save*
 
+* **npm run node** - run ts-node to get a REPL or run a script, e.g. a spike: npm run node src/spikes/consolespike.ts
+* **npm run test:watch** - re-run mocha on all *.ts files in *test/* everytime a file changes
+
+## Todo
+
+- [] Add code coverage
+- [] Custom typings
 
 ## License
 
 MIT © [Stéphane Léonard]()
+
+
+[npm-url]: https://www.npmjs.org/package/@dfordev/typescript-node-module-seed
+[npm-image]: http://img.shields.io/npm/v/@dfordev/typescript-node-module-seed.svg?style=flat-square
+
+[travis-url]: http://travis-ci.org/scallacs/typescript-node-module-seed
+[travis-image]: http://img.shields.io/travis/scallacs/typescript-node-module-seed.svg?style=flat-square
+
+[coveralls-url]: https://coveralls.io/r/scallacs/typescript-node-module-seed
+[coveralls-image]: https://img.shields.io/coveralls/scallacs/typescript-node-module-seed/master.svg?style=flat-square
