@@ -11,7 +11,7 @@
     "prepublish": "npm run build",
     "test": "mocha",
     "cover": "nyc npm test",
-    "build": "./node_modules/.bin/rimraf ./dist & tsc",
+    "build": "./node_modules/.bin/rimraf ./dist & tsc -p ./tsconfig.lib.json",
     "lint": "tslint \"lib/**/*.ts\""
   },
   "repository": {
