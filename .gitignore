@@ -1,6 +1,6 @@
 node_modules
 npm-debug
-coverage
+output
 *.log
 dist
 .nyc_output

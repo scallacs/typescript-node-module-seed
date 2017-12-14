@@ -9,12 +9,14 @@
     "test": "test"
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "test": "mocha",
     "cover": "nyc npm test",
-    "build": "num run clean & tsc -p ./tsconfig.lib.json",
+    "build": "./node_modules/.bin/rimraf ./dist & tsc -p ./tsconfig.lib.json",
     "lint": "tslint \"lib/**/*.ts\"",
-    "clean": "rimraf .nyc_ouput coverage dist"
+    "clean": "rimraf output",
+    "preversion": "npm run build && npm run test",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -44,7 +46,8 @@
     "tslint": "^5.5.0",
     "typescript": "^2.4.2",
     "nyc": "^11.2.1",
-    "istanbul": "^0.4.5"
+    "istanbul": "^0.4.5",
+    "mochawesome": "^2.3.1"
   },
   "dependencies": {},
   "nyc": {
@@ -66,7 +69,8 @@
       "json",
       "html"
     ],
-    "all": true
+    "all": true,
+    "report-dir": "output/coverage"
   },
   "homepage": "https://github.com/scallacs/typescript-node-module-seed#readme"
 }
