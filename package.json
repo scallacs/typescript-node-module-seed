@@ -2,30 +2,30 @@
     "name": "@dfordev/typescript-node-module-seed",
     "version": "0.0.1",
     "description": "Seed repo for new node modules using Typescript",
-    "main": "dist/lib/index",
-    "typings": "dist/lib/index",
+    "main": "dist/src/index",
+    "typings": "dist/src/index",
     "directories": {
-        "lib": "lib",
         "test": "test"
     },
     "scripts": {
-        "prepublish": "npm run build",
+        "prepare": "npm run build",
         "test": "./node_modules/.bin/mocha",
         "coverage": "./node_modules/.bin/nyc npm test",
         "cover": "npm run coverage",
-        "build": "npm run clean & tsc -p ./tsconfig.lib.json",
+        "build": "npm run clean && tsc -p ./tsconfig.lib.json",
         "show-coverage": "./node_modules/.bin/opn ./gen/coverage/index.html",
         "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
         "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
-        "lint": "tslint \"lib/**/*.ts\"",
-        "clean": "./node_modules/.bin/rimraf .nyc_ouput coverage dist"
+        "lint": "tslint \"src/**/*.ts\"",
+        "clean": "./node_modules/.bin/rimraf .nyc_output gen dist"
     },
     "repository": {
         "type": "git",
         "url": "git://github.com/scallacs/typescript-node-module-seed.git"
     },
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     },
     "keywords": [
         "seed",
@@ -53,6 +53,7 @@
         "nyc": "^11.2.1",
         "opn-cli": "^3.1.0",
         "rimraf": "^2.6.1",
+        "standard-version": "^4.3.0",
         "ts-node": "^3.3.0",
         "tslint": "^5.5.0",
         "typescript": "^2.4.2"
@@ -61,12 +62,12 @@
     "nyc": {
         "report-dir": "./gen/coverage",
         "include": [
-            "lib/*.ts",
-            "lib/**/*.ts"
+            "src/*.ts",
+            "src/**/*.ts"
         ],
         "exclude": [
-            "lib/*.spec.ts",
-            "lib/**/*.spec.ts",
+            "src/*.spec.ts",
+            "src/**/*.spec.ts",
             "typings",
             "test/typings.d.ts"
         ],
