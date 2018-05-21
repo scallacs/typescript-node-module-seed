@@ -1,10 +1,10 @@
 # Typescript npm module seed
 
-[![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
 [![NPM Version][npm-image]][npm-url] 
 [![Build Status][travis-image]][travis-url]
 [![Coverage][coveralls-image]][coveralls-url]
 [![Maintainability](https://api.codeclimate.com/v1/badges/9bd2e45bce738c221232/maintainability)](https://codeclimate.com/github/scallacs/typescript-node-module-seed/maintainability)
+[![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
 
 Typescript module seed
 
@@ -98,6 +98,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+Or using [standard-version](https://github.com/conventional-changelog/standard-version)
 
 
 ## Commands
