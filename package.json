@@ -12,12 +12,12 @@
         "test": "./node_modules/.bin/mocha",
         "coverage": "./node_modules/.bin/nyc npm test",
         "cover": "npm run coverage",
-        "build": "npm run clean & tsc -p ./tsconfig.lib.json",
+        "build": "npm run clean && tsc -p ./tsconfig.lib.json",
         "show-coverage": "./node_modules/.bin/opn ./gen/coverage/index.html",
         "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
         "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
         "lint": "tslint \"src/**/*.ts\"",
-        "clean": "./node_modules/.bin/rimraf .nyc_ouput gen dist"
+        "clean": "./node_modules/.bin/rimraf .nyc_output gen dist"
     },
     "repository": {
         "type": "git",
