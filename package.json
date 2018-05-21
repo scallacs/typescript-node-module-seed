@@ -18,7 +18,7 @@
         "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
         "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
         "lint": "tslint \"lib/**/*.ts\"",
-        "clean": "./node_modules/.bin/rimraf .nyc_ouput gen dist"
+        "clean": "rm -rf .nyc_ouput gen dist"
     },
     "repository": {
         "type": "git",
