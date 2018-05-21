@@ -26,9 +26,14 @@ deploy:
     email: stephane@dfordev.com
     api_key: $NPM_TOKEN
     on:
-        # tags: true # Only deploy on tag commits (git push --tags to ensue tags are uploaded to remote)
-        all_branches: true
-        # branch: "master"
+        tags: true # Only deploy on tag commits (git push --tags to ensue tags are uploaded to remote)
+        branch: "master"
+  - provider: npm
+    email: stephane@dfordev.com
+    api_key: $NPM_TOKEN
+    on:
+        branch: "develop"
+    tag: latest
 #   - provider: npm
 #     email: stephane@dfordev.com
 #     api_key: $NPM_TOKEN
