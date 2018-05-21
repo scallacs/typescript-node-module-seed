@@ -2,10 +2,9 @@
     "name": "@dfordev/typescript-node-module-seed",
     "version": "0.0.1",
     "description": "Seed repo for new node modules using Typescript",
-    "main": "dist/lib/index",
-    "typings": "dist/lib/index",
+    "main": "dist/src/index",
+    "typings": "dist/src/index",
     "directories": {
-        "lib": "lib",
         "test": "test"
     },
     "scripts": {
@@ -17,8 +16,9 @@
         "show-coverage": "./node_modules/.bin/opn ./gen/coverage/index.html",
         "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
         "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
-        "lint": "tslint \"lib/**/*.ts\"",
-        "clean": "rm -rf .nyc_ouput gen dist"
+        "lint": "tslint \"src/**/*.ts\"",
+        "clean-all": "./node_modules/.bin/rimraf .nyc_ouput gen dist",
+        "clean": "rm -rf gen/coverage gen/test-report"
     },
     "repository": {
         "type": "git",
@@ -63,12 +63,12 @@
     "nyc": {
         "report-dir": "./gen/coverage",
         "include": [
-            "lib/*.ts",
-            "lib/**/*.ts"
+            "src/*.ts",
+            "src/**/*.ts"
         ],
         "exclude": [
-            "lib/*.spec.ts",
-            "lib/**/*.spec.ts",
+            "src/*.spec.ts",
+            "src/**/*.spec.ts",
             "typings",
             "test/typings.d.ts"
         ],

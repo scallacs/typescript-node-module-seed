@@ -25,7 +25,7 @@ Typescript module seed
 - **dist** : distribution folder (build folder)
 - **gen**: contains generated files
     - **coverage**: code coverage report
-- **lib**: your source folder
+- **src**: your source folder
 - **test**: Test folder
     - **testcase** contains testing file
     - **bootstrap.ts** bootstrap file for tests
