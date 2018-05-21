@@ -13,6 +13,7 @@ before_script:
 #  - npm run typings
 # Make sure to bundle the application before any deploys
 before_deploy:
+  - npm install rimraf
 #  - npm run bundle
 # Report code coverage to coveralls after successful test runs
 after_success:
