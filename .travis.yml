@@ -25,8 +25,9 @@ deploy:
   email: stephane@dfordev.com
   api_key: $NPM_TOKEN
   on:
-    tags: true # Only deploy on tag commits (git push --tags to ensue tags are uploaded to remote)
-    branch: "master"
+    # tags: true # Only deploy on tag commits (git push --tags to ensue tags are uploaded to remote)
+    all_branches: true
+    # branch: "master"
     
 # Do not send build notifications
 notifications:
