@@ -15,6 +15,7 @@
         "cover": "npm run coverage",
         "build": "npm run clean & tsc -p ./tsconfig.lib.json",
         "show-coverage": "./node_modules/.bin/opn ./gen/coverage/index.html",
+        "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
         "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
         "lint": "tslint \"lib/**/*.ts\"",
         "clean": "./node_modules/.bin/rimraf .nyc_ouput coverage dist"
@@ -48,6 +49,7 @@
         "istanbul": "^0.4.5",
         "mocha": "^3.2.0",
         "mocha-lcov-reporter": "^1.3.0",
+        "mochawesome": "^3.0.2",
         "nyc": "^11.2.1",
         "opn-cli": "^3.1.0",
         "rimraf": "^2.6.1",
