@@ -2,8 +2,8 @@
     "name": "@dfordev/typescript-node-module-seed",
     "version": "0.0.1",
     "description": "Seed repo for new node modules using Typescript",
-    "main": "dist/src/index",
-    "typings": "dist/src/index",
+    "main": "dist/index",
+    "typings": "dist/index",
     "directories": {
         "test": "test"
     },
