@@ -3,7 +3,6 @@ language: node_js
 # Specify the node versions to run on
 node_js:
   - "stable"
-  - "node"
 
 # Set up environment variables for tests
 env:
