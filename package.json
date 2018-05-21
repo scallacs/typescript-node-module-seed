@@ -25,7 +25,8 @@
         "url": "git://github.com/scallacs/typescript-node-module-seed.git"
     },
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     },
     "keywords": [
         "seed",

@@ -78,6 +78,7 @@ For more information about code coverage see this [article](http://codeheaven.io
 
 **Reminder**: This approach uses two branches to track the history of the project. While the master branch contains tags and/or commits that record the project's official release history, a shared integration branch (usually called "develop") gives your team a place to ferret out bugs and incompatible changes. [More info here](https://www.atlassian.com/continuous-delivery/continuous-delivery-workflows-with-feature-branching-and-gitflow)
 
+You must have `git flow` extension installed. See [here](https://github.com/nvie/gitflow).
 
 - First update package version Use `npm version [patch|minor|major]. It will: 
     - Bumps the version in package.json (the patch part)

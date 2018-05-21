@@ -27,6 +27,7 @@ deploy:
   api_key: $NPM_TOKEN
   on:
     tags: true # Only deploy on tag commits (git push --tags to ensue tags are uploaded to remote)
+    branch: "master"
     
 # Do not send build notifications
 notifications:
