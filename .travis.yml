@@ -18,7 +18,7 @@ after_success:
     
 # Make sure to bundle the application before any deploys
 before_deploy:
-    
+    - npm i -g typescript rimraf
     
 # Deploy
 deploy:
