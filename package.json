@@ -19,7 +19,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "clean": "./node_modules/.bin/rimraf .nyc_output gen dist",
     "release": "standard-version",
-    "release:alpha": "npm run release -- --prerelease alpha"
+    "release:alpha": "npm run release -- --prerelease alpha",
+    "release:beta": "npm run release -- --prerelease beta"
   },
   "repository": {
     "type": "git",
