@@ -1,86 +1,91 @@
 {
-    "name": "@dfordev/typescript-node-module-seed",
-    "version": "0.0.1",
-    "description": "Seed repo for new node modules using Typescript",
-    "main": "dist/lib/index",
-    "typings": "dist/lib/index",
-    "directories": {
-        "lib": "lib",
-        "test": "test"
-    },
-    "scripts": {
-        "prepublish": "npm run build",
-        "test": "./node_modules/.bin/mocha",
-        "coverage": "./node_modules/.bin/nyc npm test",
-        "cover": "npm run coverage",
-        "build": "npm run clean & tsc -p ./tsconfig.lib.json",
-        "show-coverage": "./node_modules/.bin/opn ./gen/coverage/index.html",
-        "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
-        "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
-        "lint": "tslint \"lib/**/*.ts\"",
-        "clean": "./node_modules/.bin/rimraf .nyc_ouput coverage dist"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/scallacs/typescript-node-module-seed.git"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "keywords": [
-        "seed",
-        "node",
-        "repo",
-        "new",
-        "projects",
-        "typescript"
+  "name": "@dfordev/typescript-node-module-seed",
+  "version": "0.2.0",
+  "description": "Seed repo for new node modules using Typescript",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "./node_modules/.bin/nyc npm test",
+    "cover": "npm run coverage",
+    "build": "npm run clean && tsc -p ./tsconfig.lib.json",
+    "show-coverage": "./node_modules/.bin/opn ./gen/coverage/index.html",
+    "show-test-report": "./node_modules/.bin/opn ./gen/test-report/mochawesome.html",
+    "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
+    "lint": "tslint \"src/**/*.ts\"",
+    "clean": "./node_modules/.bin/rimraf .nyc_output gen dist",
+    "release": "standard-version",
+    "release:alpha": "npm run release -- --prerelease alpha",
+    "release:beta": "npm run release -- --prerelease beta",
+    "git-publish": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scallacs/typescript-node-module-seed.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "seed",
+    "node",
+    "repo",
+    "new",
+    "projects",
+    "typescript"
+  ],
+  "author": "Stephane Leonard <stephane@dfordev.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scallacs/typescript-node-module-seed/issues"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "mochawesome": "^3.0.2",
+    "nyc": "^11.2.1",
+    "opn-cli": "^3.1.0",
+    "rimraf": "^2.6.1",
+    "standard-version": "^4.3.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {},
+  "nyc": {
+    "report-dir": "./gen/coverage",
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
     ],
-    "author": "Stephane Leonard <stephane@dfordev.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/scallacs/typescript-node-module-seed/issues"
-    },
-    "devDependencies": {
-        "@types/chai": "^4.0.1",
-        "@types/mocha": "^2.2.41",
-        "chai": "^4.1.0",
-        "chai-as-promised": "^7.1.1",
-        "coveralls": "^3.0.1",
-        "istanbul": "^0.4.5",
-        "mocha": "^3.2.0",
-        "mocha-lcov-reporter": "^1.3.0",
-        "mochawesome": "^3.0.2",
-        "nyc": "^11.2.1",
-        "opn-cli": "^3.1.0",
-        "rimraf": "^2.6.1",
-        "ts-node": "^3.3.0",
-        "tslint": "^5.5.0",
-        "typescript": "^2.4.2"
-    },
-    "dependencies": {},
-    "nyc": {
-        "report-dir": "./gen/coverage",
-        "include": [
-            "lib/*.ts",
-            "lib/**/*.ts"
-        ],
-        "exclude": [
-            "lib/*.spec.ts",
-            "lib/**/*.spec.ts",
-            "typings",
-            "test/typings.d.ts"
-        ],
-        "extension": [
-            ".ts"
-        ],
-        "require": [],
-        "reporter": [
-            "json",
-            "html",
-            "lcov"
-        ],
-        "all": true,
-        "output": ""
-    },
-    "homepage": "https://github.com/scallacs/typescript-node-module-seed#readme"
+    "exclude": [
+      "src/*.spec.ts",
+      "src/**/*.spec.ts",
+      "typings",
+      "test/typings.d.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [],
+    "reporter": [
+      "json",
+      "html",
+      "lcov"
+    ],
+    "all": true,
+    "output": ""
+  },
+  "homepage": "https://github.com/scallacs/typescript-node-module-seed#readme"
 }

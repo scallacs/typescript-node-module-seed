@@ -3,7 +3,6 @@ language: node_js
 # Specify the node versions to run on
 node_js:
   - "stable"
-  - "node"
 
 # Set up environment variables for tests
 env:
@@ -12,21 +11,35 @@ env:
 # Make sure to have typings before the test
 before_script:
 #  - npm run typings
-# Make sure to bundle the application before any deploys
-before_deploy:
-#  - npm run bundle
 # Report code coverage to coveralls after successful test runs
 after_success:
     - npm run coverage
     - npm run report-coverage
     
+# Make sure to bundle the application before any deploys
+before_deploy:
+    - npm i -g typescript rimraf
+    
 # Deploy
 deploy:
-  provider: npm
-  email: stephane@dfordev.com
-  api_key: $NPM_TOKEN
-  on:
-    tags: true # Only deploy on tag commits (git push --tags to ensue tags are uploaded to remote)
+  - provider: npm
+    email: stephane@dfordev.com
+    api_key: $NPM_TOKEN
+    on:
+        branch: "master"
+    tag: latest
+  - provider: npm
+    email: stephane@dfordev.com
+    api_key: $NPM_TOKEN
+    on:
+        branch: "develop"
+    tag: snapshot
+#   - provider: npm
+#     email: stephane@dfordev.com
+#     api_key: $NPM_TOKEN
+#     on:
+#         all_branches: true
+#         branch: "develop"
     
 # Do not send build notifications
 notifications:

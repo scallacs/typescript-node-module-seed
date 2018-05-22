@@ -1,5 +1,5 @@
 --timeout 15000
---recursive lib/**/*.spec.ts
+--recursive src/**/*.spec.ts
 --require ts-node/register 
 --reporter mochawesome 
 --reporter-options reportDir=gen/test-report
