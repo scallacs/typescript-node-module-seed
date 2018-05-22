@@ -18,7 +18,8 @@
     "report-coverage": "cat ./gen/coverage/lcov.info | coveralls",
     "lint": "tslint \"src/**/*.ts\"",
     "clean": "./node_modules/.bin/rimraf .nyc_output gen dist",
-    "release": "standard-version"
+    "release": "standard-version",
+    "release:alpha": "npm run release -- --prerelease alpha"
   },
   "repository": {
     "type": "git",
