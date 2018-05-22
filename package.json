@@ -1,6 +1,6 @@
 {
   "name": "@dfordev/typescript-node-module-seed",
-  "version": "0.2.0-alpha.2",
+  "version": "0.2.0",
   "description": "Seed repo for new node modules using Typescript",
   "main": "dist/index",
   "typings": "dist/index",
