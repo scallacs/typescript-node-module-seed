@@ -1,6 +1,6 @@
 {
   "name": "@dfordev/typescript-node-module-seed",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0-alpha.2",
   "description": "Seed repo for new node modules using Typescript",
   "main": "dist/index",
   "typings": "dist/index",
@@ -19,8 +19,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "clean": "./node_modules/.bin/rimraf .nyc_output gen dist",
     "release": "standard-version",
-    "release:alpha": "npm run release -- --prerelease alpha",
-    "release:beta": "npm run release -- --prerelease beta"
+    "release:alpha": "npm run release -- --prerelease alpha && git push --follow-tags",
+    "release:beta": "npm run release -- --prerelease beta && git push --follow-tags"
   },
   "repository": {
     "type": "git",
