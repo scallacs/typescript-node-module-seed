@@ -48,6 +48,8 @@ TODO
 
 `npm run build`
 
+Generated file can be found in [./dist](./dist) directory.
+
 ### Test 
 
 It uses mocha for testing. Files that ends with `.spec.ts` are test file (See mocha option file [./test/mocha.opts](./test/mocha.opts)). 
